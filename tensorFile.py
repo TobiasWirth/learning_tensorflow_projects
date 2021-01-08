@@ -2,8 +2,6 @@ import pandas as pd
 import numpy as np
 import sklearn
 from sklearn import linear_model
-from sklearn.utils import shuffle
-
 
 # import data
 data = pd.read_csv("student-mat.csv", sep=";")
@@ -26,7 +24,6 @@ linear.fit(x_train, y_train)
 accuracy = linear.score(x_test, y_test)
 
 print("Accuracy: \n", accuracy)
-
 print("Coefficient: \n", linear.coef_) # Each slope value
 print("Intercept: \n", linear.intercept_) # This is the y intercept
 
